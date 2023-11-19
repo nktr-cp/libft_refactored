@@ -6,7 +6,7 @@
 #    By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/20 09:55:58 by knishiok          #+#    #+#              #
-#    Updated: 2023/11/19 23:27:04 by knishiok         ###   ########.fr        #
+#    Updated: 2023/11/19 23:43:44 by knishiok         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,7 +91,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AR) $(ARFLAGS) $@ $^
-	@ printf "$(CHECK) $(GREEN)Libft successfuly complied\n$(RESET)"
+	@ printf "$(CHECK) $(GREEN)Libft successfuly complied!\n$(RESET)"
 
 objs/%.o: %.c
 	@mkdir -p $(OBJS_DIR)
@@ -100,11 +100,11 @@ objs/%.o: %.c
 
 clean:
 	@$(RM) -r objs
-	@echo "$(CHECK) $(CIAN)Successfuly delted object files$(RESET)"
+	@echo "$(CHECK) $(CIAN)Successfuly delted object files!$(RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "$(CHECK) $(CIAN)Successfuly delted libft$(RESET)"
+	@echo "$(CHECK) $(CIAN)Successfuly delted $(NAME)!$(RESET)"
 
 re: fclean all
 
